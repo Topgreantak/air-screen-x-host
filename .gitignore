@@ -1,0 +1,74 @@
+# ── iDisplay Windows host — .gitignore ────────────────────────────────────────
+# Keep: src/, tests/, CMakeLists.txt, tests/CMakeLists.txt, vcpkg.json, README.md
+# Everything below is generated or restorable (deps via `vcpkg install` on configure).
+
+# ── Build output ──────────────────────────────────────────────
+build/
+build-*/
+build2/
+out/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+Win32/
+ARM64/
+
+# ── CMake generated ───────────────────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+CMakeUserPresets.json
+*.cmake.stamp
+compile_commands.json
+
+# ── vcpkg (deps restored from vcpkg.json manifest on configure) ─
+vcpkg_installed/
+vcpkg-manifest-install.log
+.vcpkg-root
+buildtrees/
+packages/
+downloads/
+
+# ── MSVC / Visual Studio artifacts ────────────────────────────
+.vs/
+*.obj
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+*.user
+*.aps
+*.ncb
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+enc_temp_folder/
+ipch/
+
+# ── Logs / temp ───────────────────────────────────────────────
+*.log
+*.tmp
+*.stackdump
+
+# ── Third-party SDKs pulled in locally (not vendored to git) ───
+# Parsec VDD SDK: download per README before building Extend mode.
+third_party/parsec-vdd/*.exe
+third_party/parsec-vdd/*.dll
+
+# ── OS / editor ───────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
